@@ -1,0 +1,36 @@
+
+/*
+*styling for background below. Class img responsive in HTML.
+*/
+
+#bg {
+   position: fixed;
+   top: -37.25%;
+   left: -50%;
+   width: 200%;
+   height: 200%;
+}
+
+#bg img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+   min-width: 50%;
+   min-height: 50%;
+}
+
+
+.pure-img-responsive {
+   max-width: 100%;
+   height: auto;
+}
+
+.navbar-default{
+   background:none !important;
+   border: 0;
+   box-shadow:none !important;
+
+}
