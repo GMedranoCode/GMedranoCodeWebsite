@@ -1,8 +1,11 @@
-
 /*
 *styling for background below. Class img responsive in HTML.
 *hexa color = #ffff
 */
+
+
+body {
+   background-color: black;}
 
 #bg {
    position: fixed;
@@ -29,9 +32,47 @@
    height: auto;
 }
 
+.nav {
+   background:none !important;
+   border: 0;
+   box-shadow:none !important;
+   font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+   color: navajowhite;
+}
+
 .navbar-default{
    background:none !important;
    border: 0;
    box-shadow:none !important;
+   font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+   color: navajowhite;
+}
 
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:visited,
+.navbar-default .navbar-nav>li>a:focus {
+   color: navajowhite;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+   color: aqua;
+
+}
+
+.navbar {
+   border-bottom: 1px solid navajowhite;
+}
+
+.main {
+   color:navajowhite;
+   font-family: Palatino,serif;
+}
+
+textarea {
+   overflow: auto;
+   background-color: black;
+   border: 1px solid navajowhite;
+   margin: 20px 0 !important;
+   font-size: 0.8em !important;
+   font-family: helvetica, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
