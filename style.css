@@ -34,6 +34,10 @@ body {
    height: auto;
 }
 
+.h1{
+   font-family: Palatino, serif;
+}
+
 .nav {
    background:none !important;
    border: 0;
