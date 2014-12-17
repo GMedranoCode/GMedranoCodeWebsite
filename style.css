@@ -2,14 +2,12 @@
 *styling for background below. Class img responsive in HTML.
 *hexa color = #ffff
 */
-
-
 body {
    background-color: black;
-   font-family:Palatino, serif;
+   font-family: "Josefin Sans", serif;
 }
 
-#bg {
+#bg {'Josefin Sans';
    position: fixed;
    top: -37.25%;
    left: -50%;
@@ -35,22 +33,22 @@ body {
 }
 
 .h1{
-   font-family: Palatino, serif;
+   font-family:'Josefin Sans',sans-serif;
 }
 
 .nav {
    background:none !important;
    border: 0;
    box-shadow:none !important;
-   font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+   font-family:'Josefin Sans',sans-serif;
    color: navajowhite;
 }
 
-.navbar-default{
-   background:none !important;
+.navbar-default {
+   background: none !important;
    border: 0;
-   box-shadow:none !important;
-   font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+   box-shadow: none !important;
+   font-family:'Josefin Sans',sans-serif;
    color: navajowhite;
 }
 
@@ -58,20 +56,26 @@ body {
 .navbar-default .navbar-nav>li>a:visited,
 .navbar-default .navbar-nav>li>a:focus {
    color: navajowhite;
+   font-family:'Josefin Sans',sans-serif;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
    color: aqua;
+   font-family:'Josefin Sans',sans-serif;
 
 }
 
 .navbar {
    border-bottom: 1px solid navajowhite;
+   font-family:'Josefin Sans',sans-serif;
 }
 
 .main {
    color:navajowhite;
-   font-family: Palatino,serif;
+}
+
+.container {
+   font-family:'Josefin Sans', sans-serif;
 }
 
 textarea {
