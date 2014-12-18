@@ -30,7 +30,251 @@
          body {
             background:black;color: rgba(0, 0, 0, 0.10);
          }
+         address {
+            font-family:Josefin Sans, sans-serif, helvetica,
+            sans-serif;font-style:italic;text-align:right;
+         }
+         #tagcloud {
+            background:transparent;
+            font:56px, Josefin Sans,sans-serif;
+            height:400px;
+            overflow: a ;
+            position:relative;
+            width:800px;
+         }
+         #tagcloud ul,#tagcloud li{
+            list-style:none;
+            margin:3em;
+            padding:3em;
+         }
+         #tagcloud a{
+            /* background:#FFF;
+            border:1em? solid #FFF; */
+            color:navajowhite;
+            font-family:Josefin Sans, serif;
+            left:75%;
+            line-height:5.2em;
+            margin:-0.19 0 0;
+            padding:0 0.4em;
+            position:absolute;
+            text-align:center;
+            text-decoration:none;
+            top:50%;
+         }
+         #tagcloud a:hover {
+            background:transparent;
+            border:0px solid #00F;
+            z-index:1000 !important;
+         }
+         .nav {
+            background:none !important;
+            border: 0;
+            box-shadow:none !important;
+            font-family:"Josefin Sans Linotype", "Book Antiqua", Josefin Sans, serif;
+            color: navajowhite;
+         }
+         .navbar-default{
+            background:none !important;
+            border: 0;
+            box-shadow:none !important;
+            font-family:sanserif;
+            color: navajowhite;
+         }
+         .navbar-default .navbar-nav>li>a,
+         .navbar-default .navbar-nav>li>a:visited,
+         .navbar-default .navbar-nav>li>a:focus {
+            color: navajowhite;
+         }
+         .navbar-default .navbar-nav>li>a:hover {
+            color: aqua;
+         }
+         .navbar {
+            border-bottom: 1px solid navajowhite;
+         }
+      </style>
+      </head>
+      <body>
+      <main>
+         <div id="tagcloud" onmousemove="stepping = (event.clientY - container.offsetTop) / container.offsetHeight * 0.9 - 0.6;">
+            <li><a href="http://www.brainpickings.org/2013/09/03/jorge-luis-borges-on-writing/">** borges **</a></li>
+            </br>
+            <li><a href="http://www.saintetienne.com/">** st. etienne **</a></li>
+            </br>
+            <li><a href="http://www.codepen.io/">** codepen **</a></li>
+            </br>
+            <li><a href="http://www.artbooks.de/v23/">** vaughn oliver/23envelope **</a></li>
+            </br>
+            <li><a href="http://designenvy.aiga.org/wipeout-the-designers-republic/">**  designer's republic **</a></li>
+            </br>
+            <li><a href="http://www.criterion.com/films/209-l-avventura">** l'avventura / criterion films **</a></li>
+            </br>
+            <li><a href="http://gawker.com/">** gawker **</a></li>
+            </br>
+            <li><a href="http://www.nybooks.com/">** ny  review  of  books **</a></li>
+            </br>
+            <li><a href="http://www.shmoop.com/derrida/">** derrida / shmoop **</a></li>
+            </br>
+            <li><a href="http://www.museivaticani.va/">** musei vaticani **</a></li>
+            </br>
+            <li><a href="http://www.fastcompany.com">** fast  company ** </a></li>
+            </ul>
+         </div>
+         <script type="text/javascript">
+            var a = -.03, b = 0.25, e;
+            var offA = 1, stepping = .25;
+            var container = document.getElementById("tagcloud");
+            window.onload = function()
+            {
+               e = container.getElementsByTagName("A");
+               for (var i = e.length - 1; i >= 0; i--)
+               {
+                  e[i].tcAngle = i * Math.PI * 2 / e.length;
+               }
+               setInterval(function()
+               {
+                  for (var i = e.length - 1; i >= 0; i--)
+                  {
+                     var angle = e[i].tcAngle + offA;
+                     x = 65 + Math.sin(angle) * 100;
+                     y = 65 + Math.cos(angle) * 70;
+                     tcSize = Math.round(20 - Math.sin(angle) * 60);
+//			y = (y - 50) * (200 - x * 2) * 0.01 + 50;
+                     e[i].style.fontSize = tcSize + "px";
+                     e[i].style.zIndex = tcSize;
+                     e[i].style.left = (container.offsetWidth * x / 100 - e[i].offsetWidth / 20) + "px";
+                     e[i].style.top  = y + "%";
+                  }
+                  offA += stepping;
+               }, 45);
+            }
+         </script>
+      </main>
+      </body>
 
+      <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+         ga('create', 'UA-57708317-1', 'auto');
+         ga('send', 'pageview');
+      </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--html class="full" lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="GMEDRANO WEBSITE">
+   <title>:: FAVORITES ::</title>
+   <!--CSS and CDN below -->
+   <!--link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+   <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   <script type="text/javascript" src="src/tagcloud.jquery.js"></script>
+   <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+   <style>
+      /* Force CSS reset, to include after CSS */
+      /* Always include after any other CSS */
+      * {
+         resize: none;
+         border: none;
+         outline: none;
+         text-decoration: none;
+         padding: 0px;
+         margin: 0px;
+         list-style-type: none;
+      }
+   </style>
+   <script type="text/javascript">
+      var settings = {
+         //height of sphere container
+         height: 400,
+         //width of sphere container
+         width: 400,
+         //radius of sphere
+         radius: 150,
+         //rotation speed
+         speed: 3,
+         //sphere rotations slower
+         slower: 0.9,
+         //delay between update position
+         timer: 5,
+         //dependence of a font size on axis Z
+         fontMultiplier: 15,
+         //tag css stylies on mouse over
+         hoverStyle: {
+            border: 'none',
+            color: '#0b2e6f'
+         },
+         //tag css stylies on mouse out
+         mouseOutStyle: {
+            border: '',
+            color: ''
+         }
+      };
+
+      $(document).ready(function(){
+         $('#tagcloud').tagoSphere(settings);
+      });
+   </script>
+
+   <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="navbar navbar-custom navbar-default">
+   <div class="container">
+      <ul class="nav navbar-default navbar-nav">
+         <h1><font face="Josefin Sans">:: G MEDRANO ::</font></h1>
+         <li><a href="index.html">home</a></li>
+         <li><a href="about.html">about</a></li>
+         <li><a>some favorite things</a></li>
+         <li><a href="contact.html">contact me</a></li>
+      </ul>
+   </div>
+</div>
+<!--div class="main container" data-respond>
+   <main>
+      <style>
+         body {
+            background:black;color: rgba(0, 0, 0, 0.10);
+         }
 
          address {
             font-family:Josefin Sans, sans-serif, helvetica,
@@ -42,7 +286,6 @@
             background:transparent;
             font:56px, Josefin Sans,sans-serif;
             height:400px;
-            overflow: a ;
             position:relative;
             width:800px;
          }
@@ -107,76 +350,45 @@
       </head>
       <body>
       <main>
-      <div id="tagcloud" onmousemove="stepping = (event.clientY - container.offsetTop) / container.offsetHeight * 0.9 - 0.6;">
-                <li><a href="http://www.brainpickings.org/2013/09/03/jorge-luis-borges-on-writing/">** borges **</a></li>
-            </br>
-            <li><a href="http://www.saintetienne.com/">** st. etienne **</a></li>
-            </br>
-            <li><a href="http://www.codepen.io/">** codepen **</a></li>
-            </br>
-            <li><a href="http://www.artbooks.de/v23/">** vaughn oliver/23envelope **</a></li>
-            </br>
-            <li><a href="http://designenvy.aiga.org/wipeout-the-designers-republic/">**  designer's republic **</a></li>
-            </br>
-            <li><a href="http://www.criterion.com/films/209-l-avventura">** l'avventura / criterion films **</a></li>
-            </br>
-            <li><a href="http://gawker.com/">** gawker **</a></li>
-            </br>
-            <li><a href="http://www.nybooks.com/">** ny  review  of  books **</a></li>
-            </br>
-            <li><a href="http://www.shmoop.com/derrida/">** derrida / shmoop **</a></li>
-            </br>
-            <li><a href="http://www.museivaticani.va/">** musei vaticani **</a></li>
-            </br>
-            <li><a href="http://www.fastcompany.com">** fast  company ** </a></li>
-         </ul>
-      </div>
-      <script type="text/javascript">
+   </main-->
+<!--h1 style="margin-top:150px; margin-bottom:50px">jquery tagcloud plugin demo</h1>
+<div id="tagcloud">
+   <ul>
+      <li><a href="#">dazzlingly</a></li>
+      <li><a href="#">natatory</a></li>
+      <li><a href="#">automa</a></li>
+      <li><a href="#">vinologist</a></li>
+   </ul>
+</div>
+<script type="text/javascript">
+   var settings = {
+//height of sphere container
+      height: 400,
+//width of sphere container
+      width: 400,
+//radius of sphere
+      radius: 150,
+//rotation speed
+      speed: 3,
+//sphere rotations slower
+      slower: 0.9,
+//delay between up<a href="http://www.jqueryscript.net/time-clock/">date</a> position
+      timer: 5,
+//dependence of a font size on axis Z
+      fontMultiplier: 15,
+//tag css stylies on mouse over
+      hoverStyle: {
+         border: 'none',
+         color: '#0b2e6f'
+      },
+//tag css stylies on mouse out
+      mouseOutStyle: {
+         border: '',
+         color: ''
+      }
+   };
 
-         var a = -.03, b = 0.25, e;
-         var offA = 1, stepping = .25;
-         var container = document.getElementById("tagcloud");
-
-         window.onload = function()
-         {
-            e = container.getElementsByTagName("A");
-            for (var i = e.length - 1; i >= 0; i--)
-            {
-               e[i].tcAngle = i * Math.PI * 2 / e.length;
-            }
-
-            setInterval(function()
-            {
-               for (var i = e.length - 1; i >= 0; i--)
-               {
-                  var angle = e[i].tcAngle + offA;
-                  x = 65 + Math.sin(angle) * 100;
-                  y = 65 + Math.cos(angle) * 70;
-                  tcSize = Math.round(20 - Math.sin(angle) * 60);
-
-//			y = (y - 50) * (200 - x * 2) * 0.01 + 50;
-
-                  e[i].style.fontSize = tcSize + "px";
-                  e[i].style.zIndex = tcSize;
-                  e[i].style.left = (container.offsetWidth * x / 100 - e[i].offsetWidth / 20) + "px";
-                  e[i].style.top  = y + "%";
-               }
-               offA += stepping;
-            }, 45);
-         }
-
-      </script>
-   </main>
-</body>
-
-      <script>
-         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-         ga('create', 'UA-57708317-1', 'auto');
-         ga('send', 'pageview');
-
-      </script>
-</html>
+   $(document).ready(function(){
+      $('#tagcloud').tagoSphere(settings);
+   });
+   </script>
